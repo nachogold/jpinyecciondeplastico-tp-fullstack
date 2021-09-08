@@ -1,0 +1,230 @@
+html {
+    font-size: 62.5%;    
+    max-width: 1920px;
+    margin: 0 auto
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Agregar o sacar para diferenciar los divs */
+/* div {
+    border: 1px solid black;
+} */
+
+
+/* Vamos a tener un menu horizontal con el logo a la izquierda 
+ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
+.menu-nav {
+    display: block;
+    background-color: #333;
+    height: 3.7rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 50%;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-list > li {
+    float: left;
+    color: white;
+}
+
+.menu-list > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.4rem 1rem;
+    text-decoration: none;
+}
+
+.menu-list > li > a:hover {
+    background-color: #111;
+  }
+
+#active-nav-link {
+    background-color: #585c5a;
+  }
+  
+
+#menu-logo * {
+    height: 3.7rem;
+    padding-right: 1rem;
+}
+
+/* Contenedor principal y divs hijos.
+    Partí de un diseño mobile first, pensando en que el sitio va a ser visto mayoritariamente en mobile.
+    Voy a armar todo pensando en mobile y después crear 2 media queries (ver si el TP pide 3) para tablet y desktop */
+.contenedor-main {
+    display: grid;
+    grid-template-areas: "quienes-somos"
+                         "productos"
+                         "servicios"
+                         "contacto"
+                         "mapa";
+    grid-template-rows: 20% 26% 26% 14% 14%;
+    height: 120rem;
+}
+
+.quienes-somos {
+    grid-area: quienes-somos;
+    background-color: red;
+    margin-top: 3.7rem;
+}
+
+.productos {
+    grid-area: productos;
+    background-color: green;
+}
+
+.servicios {
+    grid-area: servicios;
+    background-color: yellow;
+}
+
+.contacto {
+    grid-area: contacto;
+    background-color: brown;
+}
+
+.mapa {
+    grid-area: mapa;
+    background-color: orange;
+}
+
+footer {
+    height: 2rem;
+    font-size: 70%;
+}
+
+
+/* ESTILOS SITE CLIENTES */
+.contenedor-clientes {
+    display: grid;
+    grid-template-areas: "intro intro"
+                         "desc fotos"
+                         "resenas resenas";
+    grid-template-rows: 20% 50% 30%;
+    grid-template-columns: 50% 50%;
+    height: 65rem;
+    background: rgb(218, 212, 212);
+}
+
+.contenedor-clientes .intro-resenas {
+    grid-area: intro;
+    background-color: rgb(218, 212, 212);
+    margin-top: 5rem;
+    margin: auto;
+    padding-top: 5rem;
+    font-style: italic;
+    font-size: 80%;
+    border: solid black;
+}
+
+.desc-clientes {
+    grid-area: desc;
+    border: solid black;
+    text-align: center;
+    width: 80%;
+    border: solid black;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.contenedor-clientes .resenas {
+    grid-area: resenas;
+    background-color: rgb(218, 212, 212);
+    font-size: 80%;
+    text-align: center;
+    border: solid black;
+}
+
+.contenedor-clientes .resenas ul {
+    text-align: center;
+    width: 80%;
+    border: solid black;
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.contenedor-clientes .resenas ul li {
+    margin-bottom: 2.5%;
+    font-size: 95%;
+}
+
+.clientes-img {
+    grid-area: fotos;
+    text-align: center;
+    border: solid black;
+}
+
+.clientes-img img {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+.clientes-img img:nth-child(1) {
+    max-height: 148px;
+    max-width: 185.4px;
+}
+.clientes-img img:nth-child(2) {
+    max-height: 155px;
+    max-width: 185.4px;
+}
+
+
+/* Media Queries */
+@media screen and (min-width:640px) {
+    .contenedor-main {
+        display: grid;
+        grid-template-areas: "quienes-somos quienes-somos"
+                             "productos servicios"
+                             "contacto mapa";
+        grid-template-rows: 30% 40% 30%;
+    }
+    .menu-nav {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width:387px) {
+    .contenedor-clientes {
+        grid-template-rows: 20% 42% 38%;
+    }
+    .desc-clientes {
+        font-size: 80%;
+    }
+    .contenedor-clientes .resenas ul {
+        margin-top: 0;
+    }
+    .clientes-img img:nth-child(1) {
+        max-height: 122px;
+        max-width: 152px;
+    }
+    .clientes-img img:nth-child(2) {
+        max-height: 128px;
+        max-width: 153px;
+    }
+}
