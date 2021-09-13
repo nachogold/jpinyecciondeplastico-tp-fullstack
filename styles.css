@@ -1,76 +1,59 @@
 html {
     font-size: 62.5%;    
     max-width: 1920px;
-    margin: 0 auto
+    box-sizing: border-box;
+    scroll-padding-top: 150px;
 }
 
-* {
-    box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-    color: black;
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
+    background-color: #333;
 }
-
-
-/* Agregar o sacar para diferenciar los divs */
-/* div {
-    border: 1px solid black;
-} */
-
 
 /* Vamos a tener un menu horizontal con el logo a la izquierda 
 ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
 .menu-nav {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: #333;
-    height: 3.7rem;
     position: fixed;
-    top: 0;
     width: 100%;
-    font-size: 50%;
+    font-size: 3.5vw;
 }
 
-.menu-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.menu-list > li {
-    float: left;
+.menu-nav a {
     color: white;
-}
-
-.menu-list > li > a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1.4rem 1rem;
+    padding: 0 0.5rem;
     text-decoration: none;
 }
 
-.menu-list > li > a:hover {
-    background-color: #111;
+.menu-nav > a:hover {
+    color: red;
+
   }
 
 #active-nav-link {
-    background-color: #585c5a;
+    font-weight: bold;
+    text-decoration: underline;
   }
   
 
-#menu-logo * {
-    height: 3.7rem;
-    padding-right: 1rem;
+#menu-logo{
+    width: 12%;
+    padding-right: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 /* Contenedor principal y divs hijos.
     Partí de un diseño mobile first, pensando en que el sitio va a ser visto mayoritariamente en mobile.
-    Voy a armar todo pensando en mobile y después crear 2 media queries (ver si el TP pide 3) para tablet y desktop */
+    Voy a armar todo pensando en mobile y después crear 2 media queries para tablet y desktop */
 .contenedor-main {
     display: grid;
     grid-template-areas: "quienes-somos"
@@ -80,12 +63,12 @@ ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
                          "mapa";
     grid-template-rows: 20% 26% 26% 14% 14%;
     height: 120rem;
+    padding-top: 13vw;
 }
 
 .quienes-somos {
     grid-area: quienes-somos;
     background-color: red;
-    margin-top: 3.7rem;
 }
 
 .productos {
@@ -109,91 +92,87 @@ ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
 }
 
 footer {
+    text-align: center;
+    background-color: white;
     height: 2rem;
-    font-size: 70%;
+    font-size: 1rem;
+    font-style: italic;
 }
 
 
 /* ESTILOS SITE CLIENTES */
 .contenedor-clientes {
+    height: 98vh;
     display: grid;
     grid-template-areas: "intro intro"
                          "desc fotos"
                          "resenas resenas";
-    grid-template-rows: 20% 50% 30%;
+    grid-template-rows: 0.2fr 6fr 4fr;
     grid-template-columns: 50% 50%;
-    height: 65rem;
+    padding-top: 13vw;
     background: rgb(218, 212, 212);
 }
 
 .contenedor-clientes .intro-resenas {
     grid-area: intro;
     background-color: rgb(218, 212, 212);
-    margin-top: 5rem;
     margin: auto;
-    padding-top: 5rem;
     font-style: italic;
-    font-size: 80%;
-    border: solid black;
+    font-size: 3.5vw;
 }
 
 .desc-clientes {
     grid-area: desc;
-    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 80%;
-    border: solid black;
-    margin: 0 auto;
-    list-style-type: none;
-    padding: 0;
+    width: 100%;
+    padding: 0 5%;
+    font-size: 4vw;
 }
 
 .contenedor-clientes .resenas {
     grid-area: resenas;
     background-color: rgb(218, 212, 212);
-    font-size: 80%;
+    font-size: 3vw;
     text-align: center;
-    border: solid black;
+    padding-top: 2.5%;
 }
 
 .contenedor-clientes .resenas ul {
     text-align: center;
     width: 80%;
-    border: solid black;
     margin: auto;
     list-style-type: none;
     padding: 0;
-    margin-top: 2rem;
+    margin: auto;
 }
 
 .contenedor-clientes .resenas ul li {
-    margin-bottom: 2.5%;
-    font-size: 95%;
+    margin-bottom: 5%;
 }
 
 .clientes-img {
     grid-area: fotos;
-    text-align: center;
-    border: solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .clientes-img img {
     width: 90%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
-    display: block;
-}
-.clientes-img img:nth-child(1) {
-    max-height: 148px;
-    max-width: 185.4px;
-}
-.clientes-img img:nth-child(2) {
-    max-height: 155px;
-    max-width: 185.4px;
-}
+    margin-bottom: 2%;
+} 
 
+/* PARA LA PARTE DE CLIENTES QUEDARIA BIEN ARMAR UN MEDIAQUERY
+A PARTIR DE LOS 550 PX WIDE. QUIZAS SE PUEDE MANTENER EL TAMAÑO
+DE LETRA QUE HAY A LOS 550PX (VER https://www.pixelconverter.com/vw-to-pixel-px-converter/)
+Y ARMAR EL MEDIAQUERY DE TABLET DE 550PX-XXX PX (VER LIMITE)
+IGUALMENTE ME PARECE MEJOR ARMAR TODAS LAS OTRAS SECCIONES HASTA 
+550 PX Y DESPUES ARMAR UN MEDIAQUERY GENERAL */
 
 /* Media Queries */
 @media screen and (min-width:640px) {
@@ -204,12 +183,9 @@ footer {
                              "contacto mapa";
         grid-template-rows: 30% 40% 30%;
     }
-    .menu-nav {
-        font-size: 90%;
-    }
 }
 
-@media screen and (max-width:387px) {
+/* @media screen and (max-width:387px) {
     .contenedor-clientes {
         grid-template-rows: 20% 42% 38%;
     }
@@ -227,4 +203,4 @@ footer {
         max-height: 128px;
         max-width: 153px;
     }
-}
+} */
