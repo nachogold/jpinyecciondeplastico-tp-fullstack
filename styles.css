@@ -14,8 +14,7 @@ body {
     background-color: #333;
 }
 
-/* Vamos a tener un menu horizontal con el logo a la izquierda 
-ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
+/* Vamos a tener un menu horizontal con el logo a la izquierda */
 .menu-nav {
     display: flex;
     flex-direction: row;
@@ -41,7 +40,6 @@ ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
 
 #active-nav-link {
     font-weight: bold;
-    text-decoration: underline;
   }
   
 
@@ -51,7 +49,8 @@ ver: https://www.w3schools.com/css/css_navbar_horizontal.asp */
     margin: 0.5rem 0;
 }
 
-/* Contenedor principal y divs hijos.
+/*  INDEX
+    Contenedor principal y divs hijos.
     Partí de un diseño mobile first, pensando en que el sitio va a ser visto mayoritariamente en mobile.
     Voy a armar todo pensando en mobile y después crear 2 media queries para tablet y desktop */
 .contenedor-main {
@@ -100,7 +99,7 @@ footer {
 }
 
 
-/* ESTILOS SITE CLIENTES */
+/* CLIENTES */
 .contenedor-clientes {
     height: 98vh;
     display: grid;
@@ -135,7 +134,7 @@ footer {
 .contenedor-clientes .resenas {
     grid-area: resenas;
     background-color: rgb(218, 212, 212);
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
     padding-top: 2.5%;
 }
@@ -167,12 +166,25 @@ footer {
     margin-bottom: 2%;
 } 
 
+/* CONTACTO
+    Acá vamos a tener un form de contacto clásico que redireccione a un mail */
+.contenedor-contacto {
+    padding-top: 13vw;
+    background-color: red;
+    height: 80rem;
+    background-color: rgb(218, 212, 212);
+}
+
+.form-contacto {
+    padding: 5%;
+}
+
 /* PARA LA PARTE DE CLIENTES QUEDARIA BIEN ARMAR UN MEDIAQUERY
-A PARTIR DE LOS 550 PX WIDE. QUIZAS SE PUEDE MANTENER EL TAMAÑO
-DE LETRA QUE HAY A LOS 550PX (VER https://www.pixelconverter.com/vw-to-pixel-px-converter/)
-Y ARMAR EL MEDIAQUERY DE TABLET DE 550PX-XXX PX (VER LIMITE)
+A PARTIR DE LOS 530 PX WIDE. QUIZAS SE PUEDE MANTENER EL TAMAÑO
+DE LETRA QUE HAY A LOS 530PX (VER https://www.pixelconverter.com/vw-to-pixel-px-converter/)
+Y ARMAR EL MEDIAQUERY DE TABLET DE 530PX-XXX PX (VER LIMITE)
 IGUALMENTE ME PARECE MEJOR ARMAR TODAS LAS OTRAS SECCIONES HASTA 
-550 PX Y DESPUES ARMAR UN MEDIAQUERY GENERAL */
+530 PX Y DESPUES ARMAR UN MEDIAQUERY GENERAL */
 
 /* Media Queries */
 @media screen and (min-width:640px) {
@@ -185,22 +197,9 @@ IGUALMENTE ME PARECE MEJOR ARMAR TODAS LAS OTRAS SECCIONES HASTA
     }
 }
 
-/* @media screen and (max-width:387px) {
+/* Media query para telefonos muy chicos tipo iPhone 4 */
+@media screen and (max-width:340px) {
     .contenedor-clientes {
-        grid-template-rows: 20% 42% 38%;
+        height: 60rem;
     }
-    .desc-clientes {
-        font-size: 80%;
-    }
-    .contenedor-clientes .resenas ul {
-        margin-top: 0;
-    }
-    .clientes-img img:nth-child(1) {
-        max-height: 122px;
-        max-width: 152px;
-    }
-    .clientes-img img:nth-child(2) {
-        max-height: 128px;
-        max-width: 153px;
-    }
-} */
+}
