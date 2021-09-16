@@ -14,27 +14,30 @@
 <body>
     <nav class="menu-nav">
         <img src="img/logo.jpg" alt="logo" id="menu-logo">
-        <a href="index.html" id="active-nav-link">Home</a>
+        <a href="index.html">Home</a>
         <a href="productos.html">Productos</a>
         <a href="clientes.html">Nuestros Clientes</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html" id="active-nav-link">Contacto</a>
     </nav>
     <main class="contenedor-contacto">
+        <p id="header_contacto">Dejanos tu mensaje y nos contactaremos a la brevedad</p>
         <form class="form-contacto">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              <label for="nombre_input" class="form-label">Nombre</label>
+              <input type="text" class="form-control form-control-lg" id="nombre_input" aria-describedby="emailHelp">
+            <div class="mb-3">
+              <label for="email_input" class="form-label">Email</label>
+              <input type="email" class="form-control form-control-lg" id="email_input">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="tel_input" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control form-control-lg" id="tel_input">
             </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control form-control-lg" aria-label="With textarea" id="mensaje"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
     </main>
     <footer>

@@ -170,13 +170,33 @@ footer {
     Acá vamos a tener un form de contacto clásico que redireccione a un mail */
 .contenedor-contacto {
     padding-top: 13vw;
-    background-color: red;
-    height: 80rem;
+    height: 90rem;
     background-color: rgb(218, 212, 212);
 }
 
 .form-contacto {
-    padding: 5%;
+    padding: 2% 5%;
+}
+
+.mb-3 {
+    margin-top: 2%;
+}
+
+#header_contacto {
+    margin: auto 3rem;
+    margin-top: 3rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-label,.btn,.btn-primary {
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    margin-top: 2rem;
 }
 
 /* PARA LA PARTE DE CLIENTES QUEDARIA BIEN ARMAR UN MEDIAQUERY
