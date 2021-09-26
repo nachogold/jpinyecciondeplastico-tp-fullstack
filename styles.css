@@ -14,7 +14,7 @@ body {
     background-color: #333;
 }
 
-/* Vamos a tener un menu horizontal con el logo a la izquierda */
+/* Menu horizontal con el logo a la izquierda */
 .menu-nav {
     display: flex;
     flex-direction: row;
@@ -197,6 +197,27 @@ footer {
 
 .btn-primary {
     margin-top: 2rem;
+}
+
+.wpp-contacto {
+    margin: 3rem auto auto auto;
+    width: 70%;
+    background-color: #21b500;
+    font-size: 1.5rem;
+    height: 4rem;
+    border-radius: 10px;
+}
+
+.wpp-contacto a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-top: 0.4rem;
+}
+
+.wpp-contacto a img {
+    padding-right: 0.7rem;
 }
 
 /* PARA LA PARTE DE CLIENTES QUEDARIA BIEN ARMAR UN MEDIAQUERY

@@ -13,14 +13,14 @@
 </head>
 <body>
     <nav class="menu-nav">
-        <img src="img/logo.jpg" alt="logo" id="menu-logo">
+        <img src="img/logo.png" alt="logo" id="menu-logo">
         <a href="index.html">Home</a>
         <a href="productos.html">Productos</a>
         <a href="clientes.html">Nuestros Clientes</a>
         <a href="contacto.html" id="active-nav-link">Contacto</a>
     </nav>
     <main class="contenedor-contacto">
-        <p id="header_contacto">Dejanos tu mensaje y nos contactaremos a la brevedad</p>
+        <p id="header_contacto">Dejanos tu mensaje o escribinos por WhatsApp y nos contactaremos a la brevedad!</p>
         <form class="form-contacto">
             <div class="mb-3">
               <label for="nombre_input" class="form-label">Nombre</label>
@@ -35,10 +35,16 @@
             </div>
             <div class="mb-3">
               <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control form-control-lg" aria-label="With textarea" id="mensaje"></textarea>
+              <textarea class="form-control form-control-lg" aria-label="With textarea" id="mensaje" rows="7"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
+          <div class="wpp-contacto">
+            <a href="https://api.whatsapp.com/send?phone=549113468-1551&text=Hola%2C%20preciso%20mayor%20informaci%C3%B3n%20de%20sus%20servicios" target="_blank" rel="noopener noreferrer">
+              <img src="img/whatsapp-logo.png" alt="logo-wpp">
+              WhatsApp
+            </a>
+          </div>
     </main>
     <footer>
         Copyright 2021 - Juan Ignacio Goldberg
