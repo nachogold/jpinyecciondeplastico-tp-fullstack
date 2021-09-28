@@ -25,6 +25,7 @@ body {
     position: fixed;
     width: 100%;
     font-size: 3.5vw;
+    z-index: 1;
 }
 
 .menu-nav a {
@@ -67,17 +68,64 @@ body {
 
 .quienes-somos {
     grid-area: quienes-somos;
-    background-color: red;
+    display: grid;
+    grid-template-areas: "logo1 p1"
+                         "logo2 p2"
+                         "logo3 p3";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 10% 90%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(img/inyeccion-de-plasticos.jpg);
+    color: white;
+    font-size: 1.5rem;
+    margin: 0; 
+    padding: 0 2% 0 2%;
+    align-items: center;
+}
+
+.quienes-somos p {
+    margin: 0 5% 0 5%;
+    font-weight: 550;
+}
+
+.quienes-somos img:nth-child(1) {
+    grid-area: p1;
+}
+
+.quienes-somos img:nth-child(2) {
+    grid-area: p2;
+}
+
+.quienes-somos img:nth-child(3) {
+    grid-area: p3;
+}
+
+.quienes-somos img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15%;
+    filter: invert(14%) sepia(96%) saturate(5950%) hue-rotate(355deg) brightness(113%) contrast(112%);
+}
+
+.quienes-somos img:nth-child(1) {
+    grid-area: logo1;
+}
+
+.quienes-somos img:nth-child(2) {
+    grid-area: logo2;
+}
+
+.quienes-somos img:nth-child(3) {
+    grid-area: logo3;
 }
 
 .productos {
     grid-area: productos;
-    background-color: green;
+    background-color: #333;
 }
 
 .servicios {
     grid-area: servicios;
-    background-color: yellow;
+    background-color: #333;
 }
 
 .contacto {
