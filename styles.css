@@ -14,6 +14,14 @@ body {
     background-color: #333;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 /* Menu horizontal con el logo a la izquierda */
 .menu-nav {
     display: flex;
@@ -57,11 +65,11 @@ body {
 .contenedor-main {
     display: grid;
     grid-template-areas: "quienes-somos"
-                         "productos"
+                         "trabajos"
                          "servicios"
                          "contacto"
                          "mapa";
-    grid-template-rows: 20% 26% 26% 14% 14%;
+    grid-template-rows: 20% 30% 22% 14% 14%;
     height: 180rem;
     padding-top: 13vw;
 }
@@ -74,7 +82,7 @@ body {
                          "logo3 p3";
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 10% 90%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(img/inyeccion-de-plasticos.jpg);
+    background-image: linear-gradient(0deg,rgba(51, 51, 51, 1) 10%, rgba(51, 51, 51, 0.99) 11%, rgba(51, 51, 51, 0.9) 25%, rgba(0, 0, 0, 0.7) 100%), url(img/inyeccion-de-plasticos.jpg);
     color: white;
     font-size: 1.5rem;
     margin: 0; 
@@ -118,26 +126,83 @@ body {
     grid-area: logo3;
 }
 
-.productos {
-    grid-area: productos;
-    background-color: #333;
+.trabajos {
+    grid-area: trabajos;
+    background: rgb(51,51,51);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(200,0,0,0.15) 50%, rgba(51,51,51,1) 100%);
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                         "pic1 pic2"
+                         "pic3 pic4";
+    grid-template-rows: 15% 42.5% 42.5%;
+    grid-template-columns: 50% 50%;
+    color: white;
+    text-align: center;
+}
+
+.trabajos h3 {
+    grid-area: titulo;
+    margin: 8% 4% 0 4%;
+}
+
+.trabajos img {
+    max-width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.trabajos img:nth-child(1) {
+    grid-area: pic4;
+}
+
+.trabajos img:nth-child(2) {
+    grid-area: pic1;
+}
+
+.trabajos img:nth-child(3) {
+    grid-area: pic2;
+}
+
+.trabajos img:nth-child(4) {
+    grid-area: pic3;
 }
 
 .servicios {
     grid-area: servicios;
-    background-color: #333;
+    background-image: linear-gradient(0deg, rgba(51, 51, 51, 1) 1%, rgba(51, 51, 51, 0.99) 5%, rgba(51, 51, 51, 0.6) 50%, rgba(51, 51, 51, 0.99)  90%, rgba(51, 51, 51, 1)  100%), url(img/pellets-red-bg.jpg);   
+    color: white;
 }
+
+.servicios h2 {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.servicios ul {
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servicios ul li {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.servicios ul li::before {
+    content: "✅ ";
+}
+
 
 .contacto {
     grid-area: contacto;
-    background-color: #333;
-    border-style: dashed;
-    border-color: white;
+    background: linear-gradient(0deg, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
 }
 
 .mapa {
     grid-area: mapa;
-    background-color: #333;
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(200,0,0,0.1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
