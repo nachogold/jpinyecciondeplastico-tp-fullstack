@@ -128,7 +128,7 @@ h2 {
 
 .trabajos {
     grid-area: trabajos;
-    background-image: -webkit-linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(200,0,0,0.15) 50%, rgba(51,51,51,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(200,0,0,0.15) 50%, rgba(51,51,51,1) 100%);
     display: grid;
     grid-template-areas: "titulo titulo"
                          "pic1 pic2"
@@ -198,7 +198,7 @@ h2 {
 
 .contacto {
     grid-area: contacto;
-    background-image: -webkit-linear-gradient(90deg, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
     display: grid;
     grid-template-rows: 60% 40%;
 }
