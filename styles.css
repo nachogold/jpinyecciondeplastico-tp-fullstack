@@ -16,10 +16,12 @@ body {
 
 h3 {
     font-size: 1.5rem;
+    margin: 0;
 }
 
 h2 {
     font-size: 2rem;
+    margin: 0;
 }
 
 /* Menu horizontal con el logo a la izquierda */
@@ -245,21 +247,21 @@ h2 {
       margin-right: 1rem;   
 }
 
-.contacto span {
+.contacto div {
     grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
 }
 
-.contacto span a {
+.contacto div a {
     text-decoration: none;
     width: 15%;
     margin: 0.5rem 1rem 0 1rem;
     text-align: center;
 }
 
-.contacto span img {
+.contacto div img {
     max-height: 75%;
     filter: invert(14%) sepia(96%) saturate(5950%) hue-rotate(355deg) brightness(75%) contrast(112%);
 }
@@ -284,78 +286,96 @@ footer {
 
 /* CLIENTES */
 .contenedor-clientes {
-    height: 98vh;
+    height: 185rem;
     display: grid;
-    grid-template-areas: "intro intro"
-                         "desc fotos"
-                         "resenas resenas";
-    grid-template-rows: 0.2fr 5fr 4fr;
-    grid-template-columns: 50% 50%;
+    grid-template-areas: "trabajos"
+                         "resenas";
+    grid-template-rows: 80% 20%;
     padding-top: 13vw;
-    background: rgb(218, 212, 212);
+    color: white;
 }
 
-.contenedor-clientes .intro-resenas {
-    grid-area: intro;
-    background-color: rgb(218, 212, 212);
-    margin: auto;
-    padding-top: 2rem;  /* VER SI CONVIENE SACAR UNA VEZ QUE AGREGUE LA DESC POSTA */
-    font-style: italic;
-    font-size: 3.5vw;
+.productos-detalle {
+    grid-area: trabajos;
+    display: grid;
+    grid-template-rows: 8% 23% 23% 23% 23%;
+    background: -webkit-linear-gradient(top, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
 }
 
-.desc-clientes {
-    grid-area: desc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.productos-detalle .clientes-titulo {
+    grid-row: 1 / 2;
     text-align: center;
-    width: 100%;
-    padding: 0 5%;
-    font-size: 4vw;
+    padding: 0 1.5rem 0 1.5rem;
+    font-style: italic;
+    font-size: 1.7rem;
+}
+
+.clientes-titulo p {
+    margin: 0;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.productos-detalle img {
+    max-width: 50%;
+    margin-top: 1rem;
+}
+
+.productos-detalle div {
+    text-align: center;
+}
+
+.productos-detalle h3 {
+    padding: 1.5rem 2rem 0 2rem;
+}
+
+.productos-detalle div:nth-child(2) {
+    grid-row: 2 / 3;
+}
+
+.productos-detalle div:nth-child(3) {
+    grid-row: 3 / 4;
+}
+
+.productos-detalle div:nth-child(4) {
+    grid-row: 4 / 5;
+}
+
+.productos-detalle div:nth-child(5) {
+    grid-row: 5 / 6;
 }
 
 .contenedor-clientes .resenas {
     grid-area: resenas;
-    background-color: rgb(218, 212, 212);
-    font-size: 4vw;
     text-align: center;
-    padding-top: 2.5%;
+    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85)  100%), url(img/pellets-transparentes.png);
+    background-size: auto 100%;
+    color: black;
+    padding-top: 2rem;
+}
+
+.resenas h2 {
+    padding: 1.5rem 2rem 1rem 2rem;
+    font-style: italic;
 }
 
 .contenedor-clientes .resenas ul {
-    text-align: center;
     width: 80%;
     margin: auto;
     list-style-type: none;
     padding: 0;
-    margin: auto;
+    font-size: 1.5rem;
 }
 
 .contenedor-clientes .resenas ul li {
-    margin-bottom: 5%;
+    margin-top: 1rem;
 }
-
-.clientes-img {
-    grid-area: fotos;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.clientes-img img {
-    width: 90%;
-    margin-bottom: 2%;
-} 
 
 /* CONTACTO
     Acá vamos a tener un form de contacto clásico que redireccione a un mail */
 .contenedor-contacto {
     padding-top: 13vw;
     height: 70rem;
-    /* background-color: rgb(218, 212, 212); */
     background: -webkit-linear-gradient(top, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
     color: white;
 }
@@ -406,27 +426,26 @@ footer {
     padding-right: 0.7rem;
 }
 
-/* PARA LA PARTE DE CLIENTES QUEDARIA BIEN ARMAR UN MEDIAQUERY
-A PARTIR DE LOS 530 PX WIDE. QUIZAS SE PUEDE MANTENER EL TAMAÑO
-DE LETRA QUE HAY A LOS 530PX (VER https://www.pixelconverter.com/vw-to-pixel-px-converter/)
-Y ARMAR EL MEDIAQUERY DE TABLET DE 530PX-XXX PX (VER LIMITE)
-IGUALMENTE ME PARECE MEJOR ARMAR TODAS LAS OTRAS SECCIONES HASTA 
-530 PX Y DESPUES ARMAR UN MEDIAQUERY GENERAL */
+/* Tamaños de queries (screen width px):
+    - Small Mobile (solo algo especifico para clientes): min - 360px 
+    - Mobile: min - 480px
+    - Tablet: 481px - 768px
+    - Desktop / Laptop: 769px - 1200px
+    - XL Screens: 1201px - max */
 
-/* Media Queries */
-@media screen and (min-width:640px) {
-    .contenedor-main {
-        display: grid;
-        grid-template-areas: "quienes-somos quienes-somos"
-                             "productos servicios"
-                             "contacto mapa";
-        grid-template-rows: 30% 40% 30%;
-    }
-}
+/* MEDIA QUERIES */
 
-/* Media query para telefonos muy chicos tipo iPhone 4 */
-@media screen and (max-width:340px) {
+/* Para celulares muy chicos, principalmente por la página de clientes */
+@media screen and (max-width: 360px) {
     .contenedor-clientes {
-        height: 60rem;
+        height: 175rem;
+    }
+    .contenedor-clientes .resenas {
+        padding: 0;    
+    }
+
+    .productos-detalle img {
+        max-width: 60%;
+        margin-top: 3rem;
     }
 }
