@@ -36,6 +36,7 @@ h2 {
     width: 100%;
     font-size: 3.5vw;
     z-index: 1;
+    padding-top: 0.5%;
 }
 
 .menu-nav a {
@@ -55,9 +56,9 @@ h2 {
   
 
 #menu-logo{
-    width: 12%;
+    width: 15%;
     padding-right: 0.5rem;
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 /*  INDEX
@@ -275,6 +276,10 @@ h2 {
     max-width: 100vw;
 }
 
+.mapa iframe {
+    max-width: 95%;
+}
+
 footer {
     text-align: center;
     background-color: white;
@@ -319,6 +324,7 @@ footer {
 .productos-detalle img {
     max-width: 50%;
     margin-top: 1rem;
+    border-radius: 10px;
 }
 
 .productos-detalle div {
@@ -397,6 +403,11 @@ footer {
     font-weight: bold;
 }
 
+.contenedor-contacto input, #mensaje {
+    border: 2px solid #c70000;
+    border-radius: 4px;
+}
+
 .form-label,.btn,.btn-primary {
     font-size: 1.5rem;
 }
@@ -447,5 +458,315 @@ footer {
     .productos-detalle img {
         max-width: 60%;
         margin-top: 3rem;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) {
+    h3 {
+        font-size: 1.9rem;
+    }
+    
+    .menu-nav {
+        font-size: 2.2rem;
+    }
+
+    #menu-logo{
+        width: 80px;
+    }
+
+    /*  INDEX */
+    .contenedor-main {
+        grid-template-rows: 18% 41% 15% 11% 15%;
+        height: 150rem;
+        padding-top: 64px;
+    }
+
+    .quienes-somos {
+        font-size: 1.7rem;
+    }
+
+    .quienes-somos img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .trabajos {
+        padding: 0 5rem;
+    }
+
+    .trabajos h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .trabajos img {
+        width: 85%;
+        max-width: 220px;
+    }
+
+    .servicios {
+        padding-top: 1rem;
+    }
+
+    .servicios h2 {
+        margin: 0 2rem 1.6rem 2rem;
+    }
+
+    .servicios ul {
+        font-size: 1.65rem;
+    }
+
+    .servicios ul li {
+        margin-bottom: 1.5rem;
+    }
+    .contacto ul {
+        font-size: 1.5rem;
+    }
+
+    .contacto div {
+        padding-top: 0.1rem;
+    }
+
+    .contacto div a {
+        width: 75px;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+
+    /* CLIENTES */
+    .contenedor-clientes {
+        padding-top: 64px;
+    }
+
+    .productos-detalle .clientes-titulo {
+        font-size: 2rem;
+    }
+
+    .productos-detalle img {
+        width: 50%;
+        max-width: 243px;
+    }
+
+    .productos-detalle div {
+        text-align: center;
+    }
+
+    .productos-detalle h3 {
+        font-size: 1.7rem;
+    }
+
+    .resenas h2 {
+        font-size: 2.3rem;
+    }
+
+    .contenedor-clientes .resenas ul {
+        font-size: 1.8rem;
+    }
+
+    .contenedor-clientes .resenas ul li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* CONTACTO */
+    .contenedor-contacto {
+        padding-top: 64px;
+        height: 74rem;
+    }
+
+    .form-contacto {
+        margin: auto;
+        padding: 1% 5%;
+        max-width: 700px;
+    }
+
+    .mb-3 {
+        margin-top: 0;
+    }
+
+    #header_contacto {
+        font-size: 2rem;
+        margin: 0 4rem;
+        margin-top: 2rem;
+    }
+
+    .form-label,.btn,.btn-primary {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .wpp-contacto {
+        max-width: 220px;
+        font-size: 2rem;
+        height: 4.5rem;
+        font-family: sans-serif;
+    }
+
+    .wpp-contacto a {
+        padding: 5.5px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    h3 {
+        font-size: 1.9rem;
+    }
+    
+    .menu-nav {
+        font-size: 2.2rem;
+    }
+
+    #menu-logo{
+        width: 80px;
+    }
+
+    /*  INDEX */
+    .contenedor-main {
+        grid-template-rows: 18% 41% 15% 11% 15%;
+        height: 150rem;
+        padding-top: 64px;
+    }
+
+    .quienes-somos {
+        font-size: 1.7rem;
+    }
+
+    .quienes-somos img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .trabajos {
+        padding: 0 5rem;
+    }
+
+    .trabajos h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .trabajos img {
+        width: 85%;
+        max-width: 220px;
+    }
+
+    .servicios {
+        padding-top: 1rem;
+    }
+
+    .servicios h2 {
+        margin: 0 2rem 1.6rem 2rem;
+    }
+
+    .servicios ul {
+        font-size: 1.65rem;
+    }
+
+    .servicios ul li {
+        margin-bottom: 1.5rem;
+    }
+    .contacto ul {
+        font-size: 1.5rem;
+    }
+
+    .contacto div {
+        padding-top: 0.1rem;
+    }
+
+    .contacto div a {
+        width: 75px;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+
+    /* CLIENTES */
+    .contenedor-clientes {
+        padding-top: 64px;
+    }
+
+    .productos-detalle .clientes-titulo {
+        font-size: 2rem;
+    }
+
+    .productos-detalle img {
+        width: 50%;
+        max-width: 243px;
+    }
+
+    .productos-detalle div {
+        text-align: center;
+    }
+
+    .productos-detalle h3 {
+        font-size: 1.7rem;
+    }
+
+    .resenas h2 {
+        font-size: 2.3rem;
+    }
+
+    .contenedor-clientes .resenas ul {
+        font-size: 1.8rem;
+    }
+
+    .contenedor-clientes .resenas ul li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* CONTACTO */
+    .contenedor-contacto {
+        padding-top: 64px;
+        height: 74rem;
+    }
+
+    .form-contacto {
+        margin: auto;
+        padding: 1% 5%;
+        max-width: 700px;
+    }
+
+    .mb-3 {
+        margin-top: 0;
+    }
+
+    #header_contacto {
+        font-size: 2rem;
+        margin: 0 4rem;
+        margin-top: 2rem;
+    }
+
+    .form-label,.btn,.btn-primary {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .wpp-contacto {
+        max-width: 220px;
+        font-size: 2rem;
+        height: 4.5rem;
+        font-family: sans-serif;
+    }
+
+    .wpp-contacto a {
+        padding: 5.5px;
     }
 }
