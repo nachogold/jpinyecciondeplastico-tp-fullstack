@@ -113,7 +113,7 @@ h2 {
 .quienes-somos img {
     width: 30px;
     height: 30px;
-    margin-left: 15%;
+    margin: 0 auto;
     filter: invert(14%) sepia(96%) saturate(5950%) hue-rotate(355deg) brightness(113%) contrast(112%);
 }
 
@@ -304,7 +304,7 @@ footer {
     grid-area: trabajos;
     display: grid;
     grid-template-rows: 8% 23% 23% 23% 23%;
-    background: -webkit-linear-gradient(top, rgba(200,0,0,0.1) 1%, rgba(51,51,51,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(200,0,0,0.1), rgba(51,51,51,1));
 }
 
 .productos-detalle .clientes-titulo {
@@ -313,10 +313,10 @@ footer {
     padding: 0 1.5rem 0 1.5rem;
     font-style: italic;
     font-size: 1.7rem;
+    margin: auto;
 }
 
 .clientes-titulo p {
-    margin: 0;
     font-weight: bold;
     margin-top: 1.5rem;
 }
@@ -498,10 +498,7 @@ footer {
     }
 
     .trabajos h3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
+        margin: auto 0;
     }
 
     .trabajos img {
@@ -585,10 +582,6 @@ footer {
         margin: auto;
         padding: 1% 5%;
         max-width: 700px;
-    }
-
-    .mb-3 {
-        margin-top: 0;
     }
 
     #header_contacto {
@@ -619,155 +612,158 @@ footer {
 }
 
 /* Desktop */
-@media screen and (min-width: 769px) {
-    h3 {
-        font-size: 1.9rem;
+@media screen and (min-width: 769px) { 
+    html {
+        background: -webkit-linear-gradient(0deg,#333, white, #333);
     }
     
-    .menu-nav {
+    body{
+        max-width: 1024px;
+        margin: 0 auto;
+        border: solid white;
+        border-top: 0;
+    }
+
+    h3 {
         font-size: 2.2rem;
     }
 
-    #menu-logo{
-        width: 80px;
+    h2 {
+        font-size: 2.5rem;
     }
 
-    /*  INDEX */
-    .contenedor-main {
-        grid-template-rows: 18% 41% 15% 11% 15%;
-        height: 150rem;
-        padding-top: 64px;
+    .menu-nav {
+        padding-top: 0;
+        width: 99.65%;
+        max-width: 1021px;
+        border-right: solid white;
+        border-top: solid white;
     }
 
+    /* INDEX  */
     .quienes-somos {
-        font-size: 1.7rem;
-    }
-
-    .quienes-somos img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .trabajos {
-        padding: 0 5rem;
-    }
-
-    .trabajos h3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .trabajos img {
-        width: 85%;
-        max-width: 220px;
-    }
-
-    .servicios {
-        padding-top: 1rem;
-    }
-
-    .servicios h2 {
-        margin: 0 2rem 1.6rem 2rem;
-    }
-
-    .servicios ul {
-        font-size: 1.65rem;
-    }
-
-    .servicios ul li {
-        margin-bottom: 1.5rem;
-    }
-    .contacto ul {
-        font-size: 1.5rem;
-    }
-
-    .contacto div {
-        padding-top: 0.1rem;
-    }
-
-    .contacto div a {
-        width: 75px;
-    }
-
-    footer {
-        font-size: 1.4rem;
-    }
-
-    /* CLIENTES */
-    .contenedor-clientes {
-        padding-top: 64px;
-    }
-
-    .productos-detalle .clientes-titulo {
-        font-size: 2rem;
-    }
-
-    .productos-detalle img {
-        width: 50%;
-        max-width: 243px;
-    }
-
-    .productos-detalle div {
-        text-align: center;
-    }
-
-    .productos-detalle h3 {
-        font-size: 1.7rem;
-    }
-
-    .resenas h2 {
-        font-size: 2.3rem;
-    }
-
-    .contenedor-clientes .resenas ul {
+        grid-template-rows: 30% 30% 30%;
         font-size: 1.8rem;
     }
 
+    .quienes-somos p {
+        margin: 0 7% 0 0;
+    }
+
+    .trabajos {
+        padding: 0 10rem;
+    }
+
+    .trabajos h3 {
+        margin: auto 0;
+    }
+
+    .servicios ul {
+        font-size: 1.9rem;
+    }
+
+    .contacto ul {
+        font-size: 1.8rem;
+    }
+    
+    /* CLIENTES */
+
+    .contenedor-clientes {
+        height: 132rem;
+        grid-template-rows: 50fr 20fr;
+    }
+
+    .productos-detalle {
+        grid-area: trabajos;
+        display: grid;
+        grid-template-areas: "titulo titulo"
+                             "img1 img2"
+                             "img3 img4";
+        grid-template-rows: 20% 40% 40%;
+    }
+    
+    .productos-detalle .clientes-titulo {
+        grid-area: titulo;
+        text-align: center;
+        padding: 0 1.5rem 0 1.5rem;
+        font-style: italic;
+        font-size: 2.2rem;
+        margin: auto;
+    }
+    .productos-detalle img {
+        max-width: 50%;
+        margin-top: 1rem;
+        max-height: 253px;
+    }
+    
+    .productos-detalle h3 {
+        font-size: 1.9rem;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    
+    .productos-detalle div:nth-child(2) {
+        grid-area: img1;
+    }
+    
+    .productos-detalle div:nth-child(3) {
+        grid-area: img2;
+    }
+    
+    .productos-detalle div:nth-child(4) {
+        grid-area: img3;
+    }
+    
+    .productos-detalle div:nth-child(5) {
+        grid-area: img4;
+    }
+    
+    .resenas h2 {
+        font-size: 2.5rem;
+    }
+
+    .contenedor-clientes .resenas>div {
+        margin-top: 1.5rem;
+    }
+
+    .contenedor-clientes .resenas ul {
+        font-size: 2rem;
+    }
+    
     .contenedor-clientes .resenas ul li {
-        margin: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     /* CONTACTO */
     .contenedor-contacto {
-        padding-top: 64px;
-        height: 74rem;
-    }
-
-    .form-contacto {
-        margin: auto;
-        padding: 1% 5%;
-        max-width: 700px;
-    }
-
-    .mb-3 {
-        margin-top: 0;
+        height: 90rem;
     }
 
     #header_contacto {
+        font-size: 2.2rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-contacto div {
+        margin: 2rem auto;
+    }
+
+    .form-label {
         font-size: 2rem;
-        margin: 0 4rem;
-        margin-top: 2rem;
     }
 
-    .form-label,.btn,.btn-primary {
-        font-size: 1.8rem;
+    .form-contacto input {
+        height: 40px;
     }
 
-    .btn-primary {
-        margin-top: 2rem;
-        font-size: 2rem;
+    .form-contacto input,input::-webkit-input-placeholder {
+    font-size: 16px;
     }
 
-    .wpp-contacto {
-        max-width: 220px;
-        font-size: 2rem;
-        height: 4.5rem;
+    .form-contacto textarea,textarea::-webkit-input-placeholder {
+        font-size: 16px;
     }
 
-    .wpp-contacto a {
-        padding: 5.5px;
-    }
+
 }
