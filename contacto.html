@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JP Inyección de Plástico</title>
     <link rel="icon" href="img/jp_icono.ico?">
+    <script src="form-validation.js" defer></script>
 </head>
 <body>
     <nav class="menu-nav">
@@ -20,23 +21,26 @@
     </nav>
     <main class="contenedor-contacto">
         <p id="header_contacto">¡Dejanos tu mensaje o escribinos por WhatsApp y nos contactaremos a la brevedad!</p>
-        <form class="form-contacto">
+        <form class="form-contacto" id="formulario">
             <div class="mb-3">
               <label for="nombre_input" class="form-label">Nombre</label>
-              <input type="text" class="form-control form-control-lg" id="nombre_input" aria-describedby="emailHelp" required placeholder="Requerido">
+              <input type="text" class="form-control form-control-lg" id="nombre_input" aria-describedby="emailHelp" placeholder="Requerido" maxlength="40">
             <div class="mb-3">
               <label for="email_input" class="form-label">Email</label>
-              <input type="email" class="form-control form-control-lg" id="email_input" required placeholder="Requerido">
+              <input type="email" class="form-control form-control-lg" id="email_input" placeholder="Requerido" maxlength="60">
             </div>
             <div class="mb-3">
               <label for="tel_input" class="form-label">Teléfono</label>
-              <input type="tel" class="form-control form-control-lg" id="tel_input" required placeholder="Requerido">
+              <input type="tel" class="form-control form-control-lg" id="tel_input" placeholder="Requerido" maxlength="30">
             </div>
             <div class="mb-3">
               <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control form-control-lg" aria-label="With textarea" id="mensaje" rows="7" placeholder="Opcional"></textarea >
+              <textarea class="form-control form-control-lg" aria-label="With textarea" id="mensaje" rows="7" placeholder="Opcional" maxlength="300"></textarea >
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="submit-error">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <div class="validation-error" id="validation_error"></div>
+            </div>
          </form>
          <div class="wpp-contacto">
            <a href="https://api.whatsapp.com/send?phone=549111234-5678&text=Hola%2C%20preciso%20mayor%20informaci%C3%B3n%20de%20sus%20servicios" target="_blank" rel="noopener noreferrer">
