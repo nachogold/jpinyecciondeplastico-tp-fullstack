@@ -3,6 +3,7 @@ html {
     max-width: 1920px;
     box-sizing: border-box;
     scroll-padding-top: 150px;
+    margin: auto;
 }
 
 *, *:before, *:after {
